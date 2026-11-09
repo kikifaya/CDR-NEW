@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Côte d'Or Retreat</title>
+    <meta name="theme-color" content="#1d2124">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        document.documentElement.classList.add("js");
+        // Show the logo intro only on the first page of each visit
+        try {
+            if (!sessionStorage.getItem("cdrIntroSeen")) {
+                document.documentElement.classList.add("intro-on");
+                sessionStorage.setItem("cdrIntroSeen", "yes");
+            }
+        } catch (e) {}
+    </script>
+</head>
+<body>
+
+    <div class="intro" aria-hidden="true">
+        <div class="intro-inner">
+            <img src="images/logo-mark.png" alt="">
+            <p class="intro-name">Côte d'Or <em>Retreat</em></p>
+            <span class="intro-line"></span>
+            <p class="intro-place">Praslin &middot; Seychelles</p>
+        </div>
+    </div>
+    <div class="page-veil" aria-hidden="true"></div>
+
+    <nav class="navbar navbar-expand-xl fixed-top site-nav " id="siteNav">
+        <div class="container-fluid nav-inner">
+            <a class="navbar-brand brand" href="index.php" aria-label="Côte d'Or Retreat, home">
+                <img src="images/logo-mark-white.png" alt="">
+                <span class="brand-name">Côte d'Or</span>
+                <span class="brand-sub">Retreat &middot; Praslin</span>
+            </a>
+
+            <a class="btn btn-lux btn-nav-mobile d-xl-none" href="booking.php">Book</a>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Open the menu">
+                <span class="toggler-text toggler-open">Menu</span>
+                <span class="toggler-text toggler-close">Close</span>
+                <span class="toggler-lines"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav nav-left">
+                    <li class="nav-item d-xl-none">
+                        <a class="nav-link " href="index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="rooms.php">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="experiences.html">Experiences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="gallery.php">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav nav-right">
+                    
+                                            <li class="nav-item">
+                            <a class="nav-link nav-small " href="login.php">Log in</a>
+                        </li>
+                    
+                    <li class="nav-item">
+                        <a class="btn btn-lux btn-nav" href="booking.php">Book<span class="nav-long"> your stay</span></a>
+                    </li>
+                    <li class="nav-item d-none d-xl-block">
+                        <button type="button" class="menu-btn" onclick="openMenu()">
+                            Menu <span class="menu-lines"></span>
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="mobile-menu-info d-xl-none">
+                    <span>+248 423 5100</span>
+                    <span>cotedorretreat@seychelles.net</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-bg" id="menuBg"></div>
+        <div class="menu-shade"></div>
+
+        <button type="button" class="menu-close" onclick="closeMenu()">Close <span>&times;</span></button>
+
+        <ul class="menu-links">
+            <li><a href="index.php" data-image="hero.jpg" onmouseover="changeMenuBackground(this)" onmouseout="resetMenuBackground(this)">Home</a></li>
+            <li><a href="rooms.php" data-image="room-double.jpg" onmouseover="changeMenuBackground(this)" onmouseout="resetMenuBackground(this)">Rooms</a></li>
+            <li><a href="experiences.html" data-image="spa.jpg" onmouseover="changeMenuBackground(this)" onmouseout="resetMenuBackground(this)">Experiences</a></li>
+            <li><a href="gallery.php" data-image="strip-3.jpg" onmouseover="changeMenuBackground(this)" onmouseout="resetMenuBackground(this)">Gallery</a></li>
+            <li><a href="booking.php" data-image="pool.jpg" onmouseover="changeMenuBackground(this)" onmouseout="resetMenuBackground(this)">Book a stay</a></li>
+            <li><a href="contact.html" data-image="beach.jpg" onmouseover="changeMenuBackground(this)" onmouseout="resetMenuBackground(this)">Contact</a></li>
+        </ul>
+
+        <div class="menu-info">
+            <span>Anse Volbert, Praslin, Seychelles</span>
+            <span>+248 423 5100</span>
+            <span>cotedorretreat@seychelles.net</span>
+        </div>
+    </div>
+
+    <section class="page-hero" style="background-image: url('images/beach.jpg');">
+        <div class="container">
+            <p class="eyebrow">We'd love to hear from you</p>
+            <h1>Contact</h1>
+        </div>
+    </section>
+
+    <div class="tab-strip">
+        <div class="tab-strip-links">
+            <a href="#write">Write to us</a>
+            <a href="#find">Find us</a>
+            <a href="#getting-here">Getting here</a>
+            <a href="https://wa.me/2482537688" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-12 col-lg-4" id="find">
+                    <p class="eyebrow">Find us</p>
+                    <h2 class="section-title reveal-words">Côte d'Or Retreat</h2>
+                    <ul class="distance-list">
+                        <li><strong>Address</strong><span>Anse Volbert, Praslin</span></li>
+                        <li><strong>Phone</strong><span>+248 423 5100</span></li>
+                        <li><strong>WhatsApp</strong><span>+248 2537 688</span></li>
+                        <li><strong>Email</strong><span>cotedorretreat@seychelles.net</span></li>
+                        <li><strong>Check-in</strong><span>From 12:00</span></li>
+                        <li><strong>Check-out</strong><span>Until 10:00</span></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-7 offset-lg-1" id="write">
+                    <div class="form-panel">
+                        <p class="eyebrow">Send a message</p>
+
+                        <div id="formErrors"></div>
+
+                        <form action="contact.php" method="POST" onsubmit="return validateContact(event)" novalidate>
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <label for="name" class="form-label">Your name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <select class="form-select" id="subject" name="subject" required>
+                                        <option value="">Choose a subject</option>
+                                        <option value="Booking question">Booking question</option>
+                                        <option value="Airport or ferry transfer">Airport or ferry transfer</option>
+                                        <option value="Spa and restaurant">Spa and restaurant</option>
+                                        <option value="Special occasion">Special occasion</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-lux">Send message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section" id="getting-here">
+        <iframe src="https://www.google.com/maps?q=Anse%20Volbert%2C%20Praslin%2C%20Seychelles&amp;z=14&amp;output=embed" title="Map of Anse Volbert, Praslin" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="map-card">
+            <p class="eyebrow">Getting here</p>
+            <h3>Anse Volbert, Praslin</h3>
+            <p>About 3 km from the Praslin ferry jetty, and a two-minute walk from Côte d'Or Beach.</p>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Anse+Volbert+Praslin+Seychelles" class="btn btn-lux" target="_blank" rel="noopener">Get directions</a>
+        </div>
+    </section>
+
+    <footer class="site-footer" id="newsletter">
+        <div class="footer-ghost" aria-hidden="true">C</div>
+        <div class="container">
+            <div class="footer-intro">
+                <img class="footer-mark" src="images/logo-mark-white.png" alt="">
+                <p class="footer-statement">Côte d'Or Retreat, a family-run home on <em>Praslin</em>.</p>
+            </div>
+
+            <div class="row g-5 footer-grid">
+                <div class="col-12 col-lg-4">
+                    <p class="eyebrow">Island letters</p>
+                    <p class="footer-text">Seasonal offers, new rooms and quiet escapes. A few emails a year, never more.</p>
+
+                    <form class="newsletter-form" action="subscribe.php" method="POST">
+                        <label for="newsletterEmail" class="visually-hidden">Your email address</label>
+                        <input type="email" class="form-control" id="newsletterEmail" name="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-lux">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="col-6 col-lg-2 offset-lg-1">
+                    <h6 class="footer-heading">Explore</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="rooms.php">Rooms</a></li>
+                        <li><a href="experiences.html">Experiences</a></li>
+                        <li><a href="gallery.php">Gallery</a></li>
+                        <li><a href="booking.php">Book a stay</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h6 class="footer-heading">Guests</h6>
+                    <ul class="footer-links">
+                        <li><a href="login.php">Log in</a></li>
+                        <li><a href="register.php">Create account</a></li>
+                        <li><a href="my_bookings.php">My bookings</a></li>
+                        <li><a href="account.php">My account</a></li>
+                        <li><a href="policies.html">Hotel policies</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <h6 class="footer-heading">Visit</h6>
+                    <p class="footer-text">
+                        Anse Volbert, Praslin<br>
+                        Seychelles<br>
+                        <a href="tel:+2484235100">+248 423 5100</a><br>
+                        <a href="mailto:cotedorretreat@seychelles.net" class="footer-email">cotedorretreat@seychelles.net</a>
+                    </p>
+                    <ul class="footer-social">
+                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Côte d'Or Retreat</span>
+                <span>Check-in 12:00 &middot; Check-out 10:00</span>
+                <a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Back to top &uarr;</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- the small label that follows the mouse over photos you can click (see setupCursorLabel() in script.js) -->
+    <div class="cursor-label" id="cursorLabel" aria-hidden="true"></div>
+
+    <a class="whatsapp-float" href="https://wa.me/2482537688?text=Hello%20C%C3%B4te%20d%27Or%20Retreat%2C%20I%20have%20a%20question%20about%20a%20stay." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+        <span>WhatsApp us</span>
+    </a>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
